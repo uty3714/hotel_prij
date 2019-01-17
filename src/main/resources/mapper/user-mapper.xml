@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bby.hotel.dao.IUserDao" >
+
+    <select id="selectUserByAccount" resultType="com.bby.hotel.model.TabUserInfoModel">
+          SELECT * FROM tab_user_info where account = #{account}
+    </select>
+
+    <!--<insert id="addNewUserInfo" parameterType="com.jysy.xhotel.entity.api.request.ApiUserRegisterRequest">-->
+          <!--insert into tab_user_info(-->
+            <!--account,-->
+            <!--pass_word,-->
+            <!--hotel_id,-->
+            <!--user_nick,-->
+            <!--user_code,-->
+            <!--remark-->
+          <!--) values (-->
+                <!--#{registerUserInfo.account},-->
+                <!--#{registerUserInfo.passWord},-->
+                <!--#{registerUserInfo.hotelId},-->
+                <!--#{registerUserInfo.userNick},-->
+                <!--#{registerUserInfo.userCode},-->
+                <!--#{registerUserInfo.remark}-->
+          <!--)-->
+    <!--</insert>-->
+
+    <!--<select id="selectUserInHotelInfo" resultType="com.jysy.xhotel.entity.HotelInfoEntity">-->
+        <!--select * from tab_hotel_info where hotel_id = #{hotelId}-->
+    <!--</select>-->
+
+</mapper>
